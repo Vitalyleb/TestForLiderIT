@@ -15,9 +15,6 @@ public interface ShowcaseService {
     Showcase readAdd(char address);
     Showcase readDt(String dt);
     Showcase readUp(String updating);
-
-
-
     boolean update(Showcase showcase, int id);
     boolean delete(int id);
 }

@@ -53,7 +53,7 @@ public class ShowcaseController {
 
     @GetMapping(value = "/showcase/{address}")
     public ResponseEntity<Showcase> readAdd(@PathVariable(name = "address") char address) {
-        final Showcase showcase = showcaseService.read(address);
+        final Showcase showcase = showcaseService.readAdd(address);
 
         return showcase != null
                 ? new ResponseEntity<>(showcase, HttpStatus.OK)
