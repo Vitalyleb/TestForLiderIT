@@ -1,13 +1,14 @@
 package com.example.rest.service;
 
 import com.example.rest.model.Product;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-
+@Service
 public class ProductServiceImpl implements ProductService{
 
     private static final Map<Integer, Product> PRODUCT_MAP = new HashMap<>();

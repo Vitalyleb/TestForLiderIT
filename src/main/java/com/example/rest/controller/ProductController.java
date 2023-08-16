@@ -2,6 +2,7 @@ package com.example.rest.controller;
 
 import com.example.rest.model.Product;
 import com.example.rest.service.ProductService;
+import com.example.rest.service.ShowcaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +16,11 @@ public class ProductController {
     private final ProductService productService;
 
 
-    public ProductController(ProductService productService) {
+    @Autowired
+    public ProductController(ProductService productService){
         this.productService = productService;
-
     }
+
     @PostMapping(value = "/products")
     public ResponseEntity<?> create(@RequestBody Product product) {
         productService.create(product);
