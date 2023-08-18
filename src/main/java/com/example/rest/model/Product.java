@@ -1,14 +1,27 @@
 package com.example.rest.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "product")
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(unique = true)
     private String productname;
+    @Column
     private char address;
+    @Column
     private Double price;
+    @Column
     private String type;
+    @Column
     private String dateofcreate;
+    @Column
     private String dateofchanging;
+    @Column
     private String position;
 
     public Integer getId() {

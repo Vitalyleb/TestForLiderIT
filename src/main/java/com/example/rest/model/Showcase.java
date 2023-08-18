@@ -1,15 +1,24 @@
 package com.example.rest.model;
 
+import jakarta.persistence.*;
+
 import javax.xml.crypto.Data;
 import java.util.Date;
-
+@Entity
+@Table(name = "showcase")
 public class Showcase {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(unique = true)
     private String name;
+    @Column
     private char address;
+    @Column
     private String type;
+    @Column
     private String dt;
+    @Column
     private String updating;
 
     public Integer getId() {
